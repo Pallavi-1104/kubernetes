@@ -13,7 +13,7 @@ spec:
           maxUnavailable: 3  # Maximum number of pods that can be unavailable during the update 
     template:
           metadata: 
-                name:p  todoapp
+                name: todoapp
                 labels:
                       app: todoapp
           spec:
