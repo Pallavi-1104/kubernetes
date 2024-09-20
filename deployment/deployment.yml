@@ -44,6 +44,6 @@ spec:
       app: todoapp
   ports:
     - port: 80
-      targetport: 80
+      targetPort: 80   # Correct field name
       protocol: TCP
-      name: todoapp         
+      name: todoapp
