@@ -19,7 +19,7 @@ spec:
           spec:
               containers:
                   - name: http
-                    image: pallavi1104/student
+                    image: pallavi1104/studentapp
                     resources: 
                       requests:
                           cpu: "50m"
