@@ -31,3 +31,18 @@ spec:
     selector:
         matchLabels:
             app: todoapp
+
+
+---
+apiVersion: v1 
+kind: service
+metadata:
+        name: mytodo
+spec:
+ type: LoadBalancer
+ selector: todoapp
+ ports:
+   - port: 80
+     targetport: 80
+     protocol: TCP
+     name: todoapp         
