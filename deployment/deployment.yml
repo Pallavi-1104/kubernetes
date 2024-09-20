@@ -5,12 +5,12 @@ metadata:
         labels:
             app: todoapp
 spec:
-    replicas: 15
+    replicas: 8
     strategy: 
         type: RollingUpdate
         rollingUpdate:
-          maxSurge: 3   # Maximum number of pods that can be created over the desired replicas
-          maxUnavailable: 3  # Maximum number of pods that can be unavailable during the update 
+          maxSurge: 2   # Maximum number of pods that can be created over the desired replicas
+          maxUnavailable: 2  # Maximum number of pods that can be unavailable during the update 
     template:
           metadata: 
                 name: todoapp
