@@ -19,7 +19,7 @@ spec:
           spec:
               containers:
                   - name: http
-                    image: tomcat
+                    image: pallavi1104/todo
                     resources: 
                       requests:
                           cpu: "50m"
