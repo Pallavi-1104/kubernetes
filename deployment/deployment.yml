@@ -37,10 +37,11 @@ spec:
 apiVersion: v1 
 kind: Service
 metadata:
-        name: mytodo
+    name: mytodo
 spec:
   type: LoadBalancer
-  selector: todoapp
+  selector: 
+      app: todoapp
   ports:
     - port: 80
       targetport: 80
