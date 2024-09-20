@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-        name: todoapp
+        name: studentapp
         labels:
-            app: todoapp
+            app: studentapp
 spec:
     replicas: 8
     strategy: 
@@ -13,13 +13,13 @@ spec:
           maxUnavailable: 2  # Maximum number of pods that can be unavailable during the update 
     template:
           metadata: 
-                name: todoapp
+                name: studentapp
                 labels:
-                      app: todoapp
+                      app: studentapp
           spec:
               containers:
                   - name: http
-                    image: pallavi1104/todo
+                    image: pallavi1104/student
                     resources: 
                       requests:
                           cpu: "50m"
@@ -30,20 +30,20 @@ spec:
                           protocol: TCP      
     selector:
         matchLabels:
-            app: todoapp
+            app: studentapp
 
 
 ---
 apiVersion: v1 
 kind: Service
 metadata:
-    name: mytodo
+    name: mystudentapp
 spec:
   type: LoadBalancer
   selector: 
-      app: todoapp
+      app: studentapp
   ports:
     - port: 80
       targetPort: 80   # Correct field name
       protocol: TCP
-      name: todoapp
+      name: studentapp
