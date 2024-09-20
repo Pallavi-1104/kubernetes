@@ -44,6 +44,6 @@ spec:
       app: studentapp
   ports:
     - port: 80
-      targetPort: 80   # Correct field name
+      targetPort: 8080   # Correct field name
       protocol: TCP
       name: studentapp
