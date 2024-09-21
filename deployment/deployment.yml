@@ -19,14 +19,14 @@ spec:
           spec:
               containers:
                   - name: http
-                    image: pallavi1104/studentapp
+                    image: pallavi1104/todo
                     resources: 
                       requests:
                           cpu: "50m"
                           memory: "90Mi" 
                     ports:
                         - name: http
-                          containerPort: 8080
+                          containerPort: 80
                           protocol: TCP      
     selector:
         matchLabels:
@@ -43,7 +43,7 @@ spec:
   selector: 
       app: studentapp
   ports:
-    - port: 8080
-      targetPort: 8080   # Correct field name
+    - port: 80
+      targetPort: 80   # Correct field name
       protocol: TCP
       name: studentapp
