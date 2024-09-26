@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind:   Deployment
 metadata: 
-      name:  studentapp 
+      name:  todoapp 
       labels: 
-            app: studentapp
+            app: todoapp
 spec:
     replicas: 1   #desired state 
     strategy: 
         type: RollingUpdate
     template:
           metadata: 
-                name: studentapp 
+                name: todoapp 
                 labels:
-                      app: studentapp
+                      app: todoapp
           spec:
               containers:
                   - name: http
-                    image: pallavi1104/studentapp:latest
+                    image: pallavi1104/todo:latest
                     command:
                       - "/bin/bash" 
                       - "-c"
@@ -34,7 +34,7 @@ spec:
                           protocol: TCP      
     selector:
         matchLabels:
-            app: studentapp
+            app: todoapp
 ---
 apiVersion:  autoscaling/v2
 kind:  HorizontalPodAutoscaler
@@ -46,7 +46,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: studentapp
+    name: todoapp
   minReplicas: 1  #if below 50% scale down to 1
   maxReplicas: 2  #if above 50% scale up to 2
   metrics:  #data metrics parameter
