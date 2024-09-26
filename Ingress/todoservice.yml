@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: student
+  name: todo
 spec:
   type: ClusterIP
   selector:
-    app: student
+    app: todo
   ports:
-    - port: 8080
-      targetPort: 8080
+    - port: 80
+      targetPort: 80
       protocol: TCP
-      name: student
+      name: todo
