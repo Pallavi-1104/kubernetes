@@ -6,10 +6,12 @@ spec:
   containers:
   - name: nginx
     image: nginx
+    ports:
+    - containerPort: 80
     volumeMounts:
-    - name: efs-storage
+    - name: efs-volume
       mountPath: /usr/share/nginx/html
   volumes:
-  - name: efs-storage
+  - name: efs-volume
     persistentVolumeClaim:
       claimName: efs-pvc
