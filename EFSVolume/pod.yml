@@ -6,7 +6,6 @@ spec:
   containers:
   - name: nginx
     image: nginx
-    command: ["/bin/sh", "-c", "while true; do echo $(date) >> /usr/share/nginx/html/outfile; sleep 5; done"]
     volumeMounts:
     - name: efs-storage
       mountPath: /usr/share/nginx/html
