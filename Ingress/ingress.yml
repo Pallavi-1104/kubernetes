@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: a52e26e778dff412782ef1e181a9aad9-1570570262.ap-south-1.elb.amazonaws.com  # Replace with your domain for Nginx
+  - host: acf55f12f15c248d693890a28ef3cf55-2126851116.ap-south-1.elb.amazonaws.com  # Replace with your domain for Nginx
     http:
       paths:
       - path: /
@@ -18,7 +18,7 @@ spec:
             name: todo  # Replace with your Nginx service name
             port:
               number: 80  # Nginx service port
-  - host: a11d246e46ccf4a8b82d9d2a856cd000-1005706905.eu-north-1.elb.amazonaws.com  # Replace with your domain for Tomcat
+  - host: acf55f12f15c248d693890a28ef3cf55-2126851116.ap-south-1.elb.amazonaws.com  # Replace with your domain for Tomcat
     http:
       paths:
       - path: /student
