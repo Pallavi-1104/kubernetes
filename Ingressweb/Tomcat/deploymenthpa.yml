@@ -18,7 +18,7 @@ spec:
         spec: 
           containers:
              - name: backendapp
-               image: pallavi1104/studentapp:micro
+               image: dmirge/student:latest
                ports:
                   - containerPort: 8080
                     protocol: TCP
